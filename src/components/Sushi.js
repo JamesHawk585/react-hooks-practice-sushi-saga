@@ -1,6 +1,7 @@
 import React from "react";
 
-function Sushi(props) {
+function Sushi({sushi}) {
+  console.log(sushi)
   return (
     <div className="sushi">
       <div className="plate" onClick={/* Give me a callback! */ null}>

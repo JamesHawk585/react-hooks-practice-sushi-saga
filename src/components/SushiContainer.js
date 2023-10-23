@@ -1,10 +1,16 @@
 import React from "react";
 import MoreButton from "./MoreButton";
+import Sushi from "./Sushi";
 
-function SushiContainer(props) {
+// SushiContainer serves as the "belt' in our sushi conveyor"
+
+function SushiContainer({sushis}) {
+  const sushisToDisplay = sushis.map(sushi => <Sushi key={sushi.id} sushi={sushi}/>)
+
+
   return (
     <div className="belt">
-      {/* Render Sushi components here! */}
+      {sushisToDisplay}
       <MoreButton />
     </div>
   );
